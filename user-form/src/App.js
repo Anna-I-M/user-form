@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import InputForm from "./components/Input/InputForm";
 import UsersList from "./components/UsersList/UsersList";
-import Card from "./components/UI/Card/Card";
 import styles from "./components/Input/InputForm.module.css";
-import style from "./App.module.css";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -27,11 +25,9 @@ function App() {
   }
   return (
     <div>
-      <Card className={style.container}>
         <section>
           <InputForm onAddUser={addUsersHandler} />
         </section>
-      </Card>
         <section className={styles["form-control"]}>{content}</section>
     </div>
   );
