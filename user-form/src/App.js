@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import InputForm from "./components/Input/InputForm";
 import UsersList from "./components/UsersList/UsersList";
-import styles from "./components/Input/InputForm.module.css";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -14,7 +13,6 @@ function App() {
         age: user.age,
         id: Math.random().toString(),
       });
-      console.log(updatedUsers);
       return updatedUsers;
     });
   };
@@ -28,7 +26,7 @@ function App() {
         <section>
           <InputForm onAddUser={addUsersHandler} />
         </section>
-        <section className={styles["form-control"]}>{content}</section>
+        <section>{content}</section>
     </div>
   );
 }
